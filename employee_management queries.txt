@@ -1,0 +1,25 @@
+create database Employee_Management_System;
+use Employee_Management_System;
+create table employee(
+		id int auto_increment not null,
+        name varchar(100) not null,
+        contact int(10), 
+        email varchar(100),
+        dept varchar(100),
+        salary int(11),
+        primary key(id)
+        
+);
+desc employee;
+
+insert into employee(id,name,contact,email,dept,salary) values(1,'mukesh',979930,'choudharyji@gmail.com','r&d',1000000);
+insert into employee(id,name,contact,email,dept,salary) values(2,'arvind',9766433232,'arvind@gmail.com','r&d',9870000);
+insert into employee(id,name,contact,email,dept,salary) values(3,'jack',6764532415,'jack@gmail.com','hr',64530000);
+alter table employee drop column contact;
+
+alter table employee add column contact varchar(10);
+
+update employee set contact ='9799309955' where id=1;
+
+select * from employee;
+update employee set salary=?,contact_no=?,mail_id=? where id=2;
